@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+    //This class controlls the sound/UI/Scene management
 public class GameController : MonoBehaviour
 {
     [Header("Scene Game Objects")]
@@ -124,11 +124,10 @@ public class GameController : MonoBehaviour
                 startButton.SetActive(false);
                 endLabel.SetActive(false);
                 restartButton.SetActive(false);
+                cloud.SetActive(true);
                 activeSoundClip = SoundClip.ENGINE;
                 break;
-            // add another scene
-            // highScoreLabel.enabled = true;
-            //liveslabel.enabled = true;
+          
             case "LevelTwo":
                 highScoreLabel.enabled = false;
                 startLabel.SetActive(false);
@@ -137,11 +136,13 @@ public class GameController : MonoBehaviour
                 restartButton.SetActive(false);
                 activeSoundClip = SoundClip.ENGINE;
 
-                Lives = highScore.GetComponent<HighScore>().lives;
+
+                Lives = highScore.GetComponent<HighScore>().live;
                 Score = GetComponent<HighScore>().highScore = Score;
+              
 
                 highScoreLabel.text = "High Score: " + highScore.GetComponent<HighScore>().score;
-                livesLabel.text = "Lives Score: " + highScore.GetComponent<HighScore>().lives;
+                livesLabel.text = "Lives Score: " + highScore.GetComponent<HighScore>().live;
                 break;
             case "End":
                 scoreLabel.enabled = false;
@@ -182,7 +183,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Lives = highScore.GetComponent<HighScore>().live;
     }
 
     // Event Handlers

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Util;
-
+// this script controlls the player movement for second level
 
 public class PlayCont : MonoBehaviour
 {

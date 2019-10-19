@@ -5,7 +5,7 @@ using UnityEngine;
 
 /// <summary>
 /// Abdulkarem Alani #300993768
-/// This moves the enemy Spaceship UFO from right to left and resets them .
+/// This moves the cloud from right to left and resets them .
 /// </summary>
 
 public class Obsticle : MonoBehaviour

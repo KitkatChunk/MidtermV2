@@ -7,5 +7,5 @@ public class HighScore : MonoBehaviour
 {
     public int score;
     public int highScore;
-    public int lives;
+    public int live;
 }
